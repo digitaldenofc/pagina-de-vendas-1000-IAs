@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diretório 1000 IAs — Oferta de Lançamento</title>
+  <meta name="description" content="Mais de 1000 ferramentas de IA com link oficial, organizadas por categoria em uma lista interativa mobile. Oferta de lançamento: de R$40 por R$5,94." />
+  <style>
+    :root{
+      --bg:#070a10;
+      --panel:#0e1524;
+      --card:#121a29;
+      --text:#eaf0ff;
+      --muted:#93a4c7;
+      --border:rgba(255,255,255,.12);
+      --green:#22c55e;
+      --blue:#3b82f6;
+      --red:#ef4444;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(59,130,246,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.16), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(34,197,94,.08), transparent 55%),
+        linear-gradient(180deg, #05070c 0%, var(--bg) 45%, #05070c 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,16,.55);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar .wrap{padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; flex-direction:column; gap:2px; min-width:0}
+    .brand strong{font-size:14px; letter-spacing:.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+    .brand span{font-size:12px; color:var(--muted)}
+    .top-cta{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .btn{
+      appearance:none; border:none; cursor:pointer;
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      font-weight:900;
+      text-decoration:none;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background: linear-gradient(180deg, rgba(34,197,94,.98), rgba(34,197,94,.70));
+      color:#04120a;
+      border:1px solid rgba(34,197,94,.40);
+      box-shadow: 0 14px 34px rgba(34,197,94,.18);
+    }
+    .btn-primary:hover{transform:translateY(-1px); filter:saturate(1.05); box-shadow:0 18px 44px rgba(34,197,94,.22)}
+    .btn-ghost{
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      border:1px solid var(--border);
+    }
+    .btn-ghost:hover{transform:translateY(-1px)}
+    .hero{
+      padding:36px 0 22px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; padding-top:24px}
+      .topbar .wrap{padding:12px 16px}
+      .wrap{padding:18px}
+    }
+    .hcard{
+      border:1px solid var(--border);
+      background: rgba(18,26,41,.68);
+      border-radius:22px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hcard::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(650px 260px at 10% 10%, rgba(59,130,246,.20), transparent 60%),
+                  radial-gradient(650px 260px at 90% 20%, rgba(34,197,94,.18), transparent 55%);
+      filter: blur(8px);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .hcard > .inner{position:relative; padding:22px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(239,68,68,.10);
+      border:1px solid rgba(239,68,68,.25);
+      color:#ffd7d7;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size:40px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.5;
+      max-width:52ch;
+    }
+    .bullets{
+      margin:18px 0 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    @media (max-width: 520px){ .bullets{grid-template-columns:1fr} }
+    .b{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px; margin-top:5px;
+      background: rgba(34,197,94,.9);
+      box-shadow:0 0 0 6px rgba(34,197,94,.14);
+    }
+    .b strong{display:block; font-size:13px}
+    .b span{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+    .offer{
+      display:grid; gap:12px;
+      padding:22px;
+    }
+    .pricebox{
+      border:1px solid rgba(34,197,94,.28);
+      background: radial-gradient(900px 260px at 20% 0%, rgba(34,197,94,.18), transparent 55%),
+                  rgba(18,26,41,.75);
+      border-radius:22px;
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .price-top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .strike{color:#a9b6d2; text-decoration:line-through; font-weight:800}
+    .newp{font-size:40px; font-weight:1000; letter-spacing:-.8px; color: #bff7d2}
+    .small{font-size:12px; color:var(--muted)}
+    .countdown{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:flex-end;
+    }
+    .cd{
+      min-width:74px;
+      text-align:center;
+      padding:10px 10px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+    .cd strong{display:block; font-size:18px}
+    .cd span{display:block; font-size:11px; color:var(--muted); margin-top:2px}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .ctaRow .btn{flex:1}
+    @media (max-width: 520px){ .ctaRow .btn{width:100%} }
+
+    .section{padding:18px 0}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    @media (max-width: 920px){ .grid3{grid-template-columns:1fr} }
+    .card{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(18,26,41,.62);
+      border-radius:22px;
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+      margin:18px 0;
+    }
+
+    .preview{
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(18,26,41,.62);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+    .previewTop{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+    }
+    .lights{display:flex; gap:6px}
+    .light{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.14)}
+    .light:nth-child(1){background:rgba(239,68,68,.55)}
+    .light:nth-child(2){background:rgba(245,158,11,.55)}
+    .light:nth-child(3){background:rgba(34,197,94,.55)}
+    .previewBody{padding:16px}
+    .fakeSearch{
+      display:flex; gap:10px; align-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:12px 12px;
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .rows{display:grid; gap:10px}
+    .row{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:12px;
+      display:flex; gap:12px; align-items:flex-start; justify-content:space-between;
+    }
+    .row .l{min-width:0}
+    .row .l strong{display:block; font-size:14px}
+    .row .l span{display:block; margin-top:4px; font-size:12px; color:var(--muted)}
+    .miniBtn{
+      padding:10px 12px;
+      border-radius:14px;
+      font-weight:900;
+      border:1px solid rgba(34,197,94,.35);
+      background: rgba(34,197,94,.18);
+      color:#bff7d2;
+      white-space:nowrap;
+    }
+
+    .faq details{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(18,26,41,.62);
+      border-radius:18px;
+      padding:14px 14px;
+      margin:10px 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq p{margin:10px 0 0; color:var(--muted); font-size:13px; line-height:1.55}
+
+    .stickyCta{
+      position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background: rgba(7,10,16,.70);
+      border-top:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      padding:10px 14px;
+    }
+    .stickyCta .inner{
+      max-width:1100px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .stickyCta .txt{display:flex; flex-direction:column; gap:2px}
+    .stickyCta .txt strong{font-size:13px}
+    .stickyCta .txt span{font-size:12px; color:var(--muted)}
+    .pulse{
+      position:relative;
+      animation: floaty 2.2s ease-in-out infinite;
+    }
+    .pulse::after{
+      content:"";
+      position:absolute; inset:-4px;
+      border-radius:18px;
+      border:1px solid rgba(34,197,94,.35);
+      animation: pulse 1.6s ease-out infinite;
+      pointer-events:none;
+    }
+    @keyframes pulse{
+      0%{opacity:.85; transform:scale(1)}
+      100%{opacity:0; transform:scale(1.12)}
+    }
+    @keyframes floaty{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-2px)}
+    }
+
+    .spacerBottom{height:84px}
+    @media (max-width:520px){ .spacerBottom{height:100px} }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <strong>Diretório 1000 IAs (Interativo)</strong>
+        <span>Oferta de lançamento • de R$40 por R$5,94</span>
+      </div>
+      <div class="top-cta">
+        <span class="pill">⏳ <span id="miniTimer">Carregando…</span></span>
+        <a class="btn btn-primary" id="ctaTop" href="#" target="_blank" rel="noopener">Comprar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hcard">
+        <div class="inner">
+          <div class="kicker">🚨 LANÇAMENTO: preço promocional por tempo limitado</div>
+          <h1>Mais de <span style="color:#bff7d2">1000 ferramentas de IA</span> com link oficial — organizadas e prontas pra usar.</h1>
+          <p class="sub">
+            Chega de perder semanas pesquisando. Abra no celular, procure pelo objetivo e clique em <strong>Acessar Oficial</strong>.
+          </p>
+
+          <div class="bullets">
+            <div class="b"><div class="dot"></div><div><strong>Interativo (mobile)</strong><span>Busca instantânea + categorias</span></div></div>
+            <div class="b"><div class="dot"></div><div><strong>Link oficial</strong><span>Um clique e você já está na ferramenta</span></div></div>
+            <div class="b"><div class="dot"></div><div><strong>Economiza tempo</strong><span>Meses de pesquisa em um arquivo</span></div></div>
+            <div class="b"><div class="dot"></div><div><strong>Uso imediato</strong><span>Sem enrolação, é abrir e usar</span></div></div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="ctaRow">
+            <a class="btn btn-primary pulse" id="ctaHero" href="#" target="_blank" rel="noopener">👉 Quero acesso por R$5,94</a>
+            <a class="btn btn-ghost" href="#conteudo">Ver o que tem dentro</a>
+          </div>
+          <div style="margin-top:10px" class="small">
+            ✅ Entrega imediata após o pagamento • 📱 Funciona no celular • 🔗 Links diretos
+          </div>
+        </div>
+      </div>
+
+      <!-- OFFER BOX -->
+      <aside class="offer">
+        <div class="pricebox">
+          <div class="price-top">
+            <div>
+              <div class="small">Preço normal</div>
+              <div class="strike">R$ 40,00</div>
+              <div class="small" style="margin-top:8px">Hoje (lançamento)</div>
+              <div class="newp">R$ 5,94</div>
+              <div class="small">Acesso completo ao diretório</div>
+            </div>
+            <div class="countdown" aria-label="Contagem regressiva">
+              <div class="cd"><strong id="dd">00</strong><span>dias</span></div>
+              <div class="cd"><strong id="hh">00</strong><span>horas</span></div>
+              <div class="cd"><strong id="mm">00</strong><span>min</span></div>
+              <div class="cd"><strong id="ss">00</strong><span>seg</span></div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="ctaRow">
+            <a class="btn btn-primary" id="ctaBox" href="#" target="_blank" rel="noopener">Comprar no WhatsApp</a>
+            <a class="btn btn-ghost" href="#faq">Dúvidas</a>
+          </div>
+
+          <div style="margin-top:10px" class="small">
+            ⚠️ Quando o tempo acabar, o valor volta para <strong>R$40</strong>.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>O que você recebe</h3>
+          <p>
+            Um arquivo interativo (HTML) com <strong>1000 IAs</strong>, descrição e botão chamativo de link oficial,
+            separado por categorias e com busca instantânea.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="conteudo" class="section">
+      <div class="grid3">
+        <div class="card">
+          <h3>⚡ Use por objetivo</h3>
+          <p>Imagem, vídeo, código, marketing, automação, produtividade… você acha em segundos e já abre o link oficial.</p>
+        </div>
+        <div class="card">
+          <h3>📱 Perfeito no celular</h3>
+          <p>Layout mobile-first: toque no item, veja a descrição completa e acesse com 1 clique.</p>
+        </div>
+        <div class="card">
+          <h3>🧠 Economia real de tempo</h3>
+          <p>Você não compra “lista”. Você compra <strong>atalho</strong>. Pesquisa pronta e organizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="section">
+      <div class="preview">
+        <div class="previewTop">
+          <div style="display:flex;gap:10px;align-items:center">
+            <div class="lights"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+            <strong>Prévia do diretório (visual)</strong>
+          </div>
+          <span class="pill">✅ Interativo</span>
+        </div>
+        <div class="previewBody">
+          <div class="fakeSearch">🔎 Buscar por: “imagem”, “voz”, “código”, “e-mail”, “marketing”…</div>
+          <div class="rows">
+            <div class="row">
+              <div class="l">
+                <strong>#001 • Exemplo de IA</strong>
+                <span>Descrição completa aparece ao abrir o item no celular. Link oficial com 1 clique.</span>
+              </div>
+              <div class="miniBtn">Acessar Oficial</div>
+            </div>
+            <div class="row">
+              <div class="l">
+                <strong>#110 • Exemplo de IA (Códigos)</strong>
+                <span>Separado por categorias, com busca instantânea e botão de copiar link.</span>
+              </div>
+              <div class="miniBtn">Acessar Oficial</div>
+            </div>
+            <div class="row">
+              <div class="l">
+                <strong>#347 • Exemplo de IA (Saúde)</strong>
+                <span>Você não perde tempo pesquisando ferramenta por ferramenta.</span>
+              </div>
+              <div class="miniBtn">Acessar Oficial</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="ctaRow">
+            <a class="btn btn-primary pulse" id="ctaMid" href="#" target="_blank" rel="noopener">👉 Quero acesso por R$5,94</a>
+            <a class="btn btn-ghost" href="#depoimentos">Ver resultados</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section id="depoimentos" class="section">
+      <div class="grid3">
+        <div class="card">
+          <h3>⭐ “Economizei dias”</h3>
+          <p>“Eu ficava caçando ferramenta no YouTube. Com o diretório eu só busco e clico.”</p>
+        </div>
+        <div class="card">
+          <h3>⭐ “Muito organizado”</h3>
+          <p>“As categorias ajudam demais. Achei ferramentas que nem sabia que existiam.”</p>
+        </div>
+        <div class="card">
+          <h3>⭐ “Vale mais que o preço”</h3>
+          <p>“Pelo valor de lançamento, isso é absurdo. Dá pra usar no trabalho todo dia.”</p>
+        </div>
+      </div>
+      <div class="small" style="margin-top:10px; color:var(--muted)">
+        *Depoimentos exemplo (você pode substituir pelos seus prints reais depois).
+      </div>
+    </section>
+
+    <!-- GUARANTEE / RISK REVERSAL -->
+    <section class="section">
+      <div class="card">
+        <h3>✅ Garantia simples (opcional)</h3>
+        <p>
+          Se você quiser aumentar conversão, use uma garantia curta.
+          Exemplo: “Se não curtir, eu te devolvo” (defina sua regra).
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <h2 style="margin:0 0 10px; font-size:22px;">Perguntas rápidas</h2>
+
+      <details>
+        <summary>O que eu recebo após comprar? <span class="pill">📦</span></summary>
+        <p>Você recebe um link de acesso com as 1000 IAs + links oficiais. Abre no celular ou PC pelo navegador.</p>
+      </details>
+
+      <details>
+        <summary>Funciona no celular? <span class="pill">📱</span></summary>
+        <p>Sim. Essa versão é mobile-first: toque no item, veja a descrição completa e acesse com 1 clique.</p>
+      </details>
+
+      <details>
+        <summary>Preciso instalar algo? <span class="pill">⚙️</span></summary>
+        <p>Não. É só abrir o arquivo no navegador (Chrome recomendado).</p>
+      </details>
+
+      <details>
+        <summary>Por que está tão barato? <span class="pill">🔥</span></summary>
+        <p>É preço promocional de lançamento. Quando o contador zerar, volta para R$40.</p>
+      </details>
+
+      <div class="divider"></div>
+
+      <div class="ctaRow">
+        <a class="btn btn-primary pulse" id="ctaFaq" href="#" target="_blank" rel="noopener">👉 Comprar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#top">Voltar ao topo</a>
+      </div>
+    </section>
+
+    <div class="spacerBottom"></div>
+  </main>
+
+  <!-- STICKY CTA -->
+  <div class="stickyCta">
+    <div class="inner">
+      <div class="txt">
+        <strong>Oferta de lançamento: R$5,94</strong>
+        <span>De R$40 • termina em <span id="stickyTimer">--:--</span></span>
+      </div>
+      <a class="btn btn-primary pulse" id="ctaSticky" href="#" target="_blank" rel="noopener">Comprar no WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // CONFIG — MUDE AQUI
+    // =========================
+    const WHATSAPP_NUMBER = "5519991194979"; // <-- troque para 55 + DDD + número (sem espaços)
+    const PRODUCT_NAME = "Diretório Interativo de 1000 IAs";
+    const PRICE_NOW = "R$5,94";
+    const PRICE_OLD = "R$40,00";
+
+    // Mensagem pronta (pode editar)
+    const WHATSAPP_TEXT =
+      `Olá! Quero comprar o ${PRODUCT_NAME} pela oferta de lançamento (${PRICE_OLD} por ${PRICE_NOW}). Como faço para pagar e receber o acesso?`;
+
+    // Contador (define fim da oferta)
+    // Recomendado: 24h a partir da primeira visita (fica salvo no dispositivo).
+    const OFFER_HOURS = 24;
+
+    // =========================
+    // WhatsApp CTA link builder
+    // =========================
+    function buildWhatsAppLink(){
+      const t = encodeURIComponent(WHATSAPP_TEXT);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${t}`;
+    }
+
+    // Apply links to all CTA buttons
+    const ctas = ["ctaTop","ctaHero","ctaBox","ctaMid","ctaFaq","ctaSticky"];
+    const link = buildWhatsAppLink();
+    ctas.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = link;
+    });
+
+    // =========================
+    // Countdown timer (per device)
+    // =========================
+    const KEY = "offer_deadline_v1";
+    function getDeadline(){
+      const saved = localStorage.getItem(KEY);
+      if (saved && !Number.isNaN(Number(saved))) return Number(saved);
+      const d = Date.now() + OFFER_HOURS * 60 * 60 * 1000;
+      localStorage.setItem(KEY, String(d));
+      return d;
+    }
+    const deadline = getDeadline();
+
+    const dd = document.getElementById("dd");
+    const hh = document.getElementById("hh");
+    const mm = document.getElementById("mm");
+    const ss = document.getElementById("ss");
+    const miniTimer = document.getElementById("miniTimer");
+    const stickyTimer = document.getElementById("stickyTimer");
+
+    function pad2(n){ return String(n).padStart(2,"0"); }
+
+    function tick(){
+      const now = Date.now();
+      let diff = Math.max(0, deadline - now);
+
+      const days = Math.floor(diff / (24*60*60*1000));
+      diff -= days*(24*60*60*1000);
+      const hours = Math.floor(diff / (60*60*1000));
+      diff -= hours*(60*60*1000);
+      const mins = Math.floor(diff / (60*1000));
+      diff -= mins*(60*1000);
+      const secs = Math.floor(diff / 1000);
+
+      if (dd) dd.textContent = pad2(days);
+      if (hh) hh.textContent = pad2(hours);
+      if (mm) mm.textContent = pad2(mins);
+      if (ss) ss.textContent = pad2(secs);
+
+      const short = `${pad2(hours + days*24)}:${pad2(mins)}:${pad2(secs)}`;
+      if (miniTimer) miniTimer.textContent = short;
+      if (stickyTimer) stickyTimer.textContent = short;
+
+      // If expired, you can change the UI (optional)
+      if (deadline - now <= 0){
+        // example: keep running but show 00:00:00
+      }
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
